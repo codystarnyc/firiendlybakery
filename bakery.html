@@ -75,12 +75,17 @@ footer img{
 
 .logo1 {
   position: absolute;
-  width: 100vw;
+  width: 97vw;
 }
 
 
 nav {
   margin-bottom: 1%; }
+
+.nav2{
+    height:  50px;
+  } 
+
 
 #trainerRow {
   margin-bottom: 2%; }
@@ -88,7 +93,7 @@ nav {
 .carousel-inner {
   overflow: visible; }
 
-  .nav {
+  .nav1 {
     max-width: 100vw;
     max-height:10vh;
     display: grid;
@@ -116,17 +121,19 @@ nav {
   </style>
 </head>
 <body>
-<body onload="setScreen();">
+<body onload="setScreen()">
  
-    <nav class="nav">
-      <div><a href="/">Home</a></div>
-      <div><a href="cookie">Cookies</a></div>
-      <div><a href="muffin">Muffins</a></div>
-      <div><a href="cake">Cakes</a></div>
-      <div><a href="contact">Contact Us</a></div>
-  </nav>
-</div>
-  <div class="header"><img class="logo1" src="bakerylogofinal.png"></div>
+    <div class="nav1">
+      <div class="nav2"><a href="/">Home</a></div>
+      <div class="nav2"><a href="cookie">Cookies</a></div>
+      <div class="nav2"><a href="muffin">Muffins</a></div>
+      <div class="nav2"><a href="cake">Cakes</a></div>
+      <div class="nav2"><a href="contact">Contact Us</a></div>
+    </div>
+
+
+    <img class="logo1" src="bakerylogofinal.png">
+
   <div class = "row" id = "trainerRow">
     <div class = "container">
       <div class="carousel slide" data-ride="carousel" data-interval = "false" id="trainerCarousel">
