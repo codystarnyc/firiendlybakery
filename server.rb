@@ -4,7 +4,7 @@ require 'curb'
 require 'json'
 
 
-set :public_folder, File.dirname(__FILE__) + '/publics'
+
 
 get '/' do
   erb :home
