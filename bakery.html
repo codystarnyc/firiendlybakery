@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="Animate.css">
+  <!-- <link rel = "stylesheet" href = "css/main.css"> -->
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    html {
+    /* overflow-x: hidden; */
+    min-height: 100vw; }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    body {    
+      position: fixed;
+      color: pink;
+      top: 20px;
+      /* margin-right: 10px; */
+      /* padding: 20px; */
+      background-image:url("finalbackground3.png");
+      /* background-position: center; */
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      /* background-clip: initial; */
+      line-height: 1em; 
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+}
+      
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      /* background-image: url("footerbg.png");
+      background-size: 100%; */
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+footer img{
+  width:100vw;
+  height:20vw;;
+  margin:0;
+}
+
+.header{
+  margin-left: 0;
+}
+
+.carousel-item {
+  /* ß */
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.carousel img {
+  min-height: 50%;
+  max-height: 110%;
+  opacity: 0.9;
+  position: absolute;
+  right: 10%; 
+  top: 13px;}
+
+#contentBox {
+  display: flex;
+  align-items: center; }
+
+.carouselWrap {
+  height: 40vh; }
+
+.logo1 {
+  position: absolute;
+  width: 100vw;
+}
+
+
+nav {
+  margin-bottom: 1%; }
+
+#trainerRow {
+  margin-bottom: 2%; }
+
+.carousel-inner {
+  overflow: visible; }
+
+  .nav {
+    max-width: 100vw;
+    max-height:10vh;
+    display: grid;
+    grid-template: 15vh / 1fr 1fr 1fr 1fr 1fr;
+    color: #fbb4dc;
+    font-size: 4vh;
+    font-family: 'Loved by the King', cursive;
+    text-align: center;
+    
+  }
+/* .logo1 {
+  width: 100vw;
+ 
+} */
+#trainer3name{
+  color: pink;
+}
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+<body onload="setScreen();">
+ 
+    <nav class="nav">
+      <div><a href="/">Home</a></div>
+      <div><a href="cookie">Cookies</a></div>
+      <div><a href="muffin">Muffins</a></div>
+      <div><a href="cake">Cakes</a></div>
+      <div><a href="contact">Contact Us</a></div>
+  </nav>
+</div>
+  <div class="header"><img class="logo1" src="bakerylogofinal.png"></div>
+  <div class = "row" id = "trainerRow">
+    <div class = "container">
+      <div class="carousel slide" data-ride="carousel" data-interval = "false" id="trainerCarousel">
+        <div class = "carousel-inner">
+          <div class = "carousel-item active" id = "red">
+            <div class = "carouselWrap">
+              <img class = "trainer animated bounceIn" src = "cupcake.png"/>
+              <!-- <div class="wrapper">
+                  <img id="slide" src="img/badges.png" />
+              </div> -->
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h2 id = "trainer1name">Red</h2>
+                <p id = "trainer1text">Red especially loves fighting against trainers that are stronger than he is</p> -->
+              </div>
+            </div>
+          </div>
+          <div class = "carousel-item" id = "cookies">
+            <div class = "carouselWrap">
+                <img class = "trainer animated rubberBand" src = "cookies.png"/>
+                <!-- <div class="wrapper">
+                    <img id="slide" src="img/badges.png" />
+                </div> -->
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h2 id = "trainer2name">Bald Eagle</h2>
+                <p id = "trainer2text">Nobody really knows how old this trainer is, but he sure loves to battle Pokemon</p> -->
+              </div>
+            </div>
+          </div>
+          <div class = "carousel-item" id = "muffin">
+            <div class = "carouselWrap">
+              <img class = "trainer animated slideInLeft" style = "top: 30%; right: 15%;" src = "muffin.png"/>
+              <!-- <div class="wrapper">
+                  <img id="slide" src="img/badges.png" />
+              </div> -->
+              <div class="carousel-caption d-none d-md-block">
+                <!-- <h2 id = "trainer3name">Muffins</h2> -->
+            
+              </div>
+            </div>
+          </div>
+         
+        <a class="carousel-control-prev" href = "#trainerCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href = "#trainerCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+
+<footer class="container-fluid text-center">
+    <img id="banner" src="bannerbar.png" />
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src = "js/library.js"></script>
+    <script>
+      $("#trainerCarousel").on('slid.bs.carousel', function () {
+        console.log('something is sliding');
+        let trainer = document.getElementsByClassName('active')[0].id;
+        setTimeout(function() {
+          setScreen();
+        }, 600);
+        setScreen();
+      });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Cute+Font|Loved+by+the+King" rel="stylesheet">
+    <link rel="stylesheet" href="Animate.css">
+     <link rel = "stylesheet" href = "main.css">
+    <title>Cake House</title>
+  </head>
+  <body onload="setScreen();"></body>
+    
+
+    <!-- <div class="logo1"></div> -->
+    <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+    <nav class= "nav">
+      <div><a href="/">Home</a></div>
+      <div><a href="cookie" >Cookies</a></div>
+      <div><a href="muffin" >Muffins</a></div>
+      <div><a href="cake">Cakes</a></div>
+    </nav>
+    <div class="logo1"><img src="bakerylogofinal.png"></div>
+   
+      -->
+    <!-- <div class = "row" id = "footer">
+    <div class="banner"> </div>
+    </div> -->
+    <!-- <footer class="footer">
+  <div>The Prince of All Flavors Bakeshop</div>
+  <div>WST 3338926 K</div>
+  <div>Western Capital City</div>
+  <div>Ph: 555 426 1989</div>
+  <div>Monday - Friday 8 AM to 8 PM</div>
+</footer>
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src = "js/library.js"></script>
+   
+  </body>
+</html> --> -->
