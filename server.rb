@@ -1,13 +1,8 @@
-# require 'sinatra'
 
-# get '/' do
-
-#     puts ENV['EMAIL_USERNAME']
-#     erb :home
-# end
 require 'sinatra'
 require 'curb'
 require 'json'
+
 
 set :public_folder, File.dirname(__FILE__) + '/publics'
 
@@ -32,13 +27,13 @@ get '/contact' do
   erb :contact
 end
 
-get '/events' do
-  @result = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?q=baking&location.address=nyc&token=44ZRBDN4HYITKNUPIVV7")
-  @data = @result.body_str
-  @parsed = JSON.parse(@data)
-  @events = @parsed['events']
-  erb :events
-end
+# get '/events' do
+#   @result = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?q=baking&location.address=nyc&token=44ZRBDN4HYITKNUPIVV7")
+#   @data = @result.body_str
+#   @parsed = JSON.parse(@data)
+#   @events = @parsed['events']
+#   erb :events
+# end
 
 $cookies = []
 $muffins = []
@@ -76,6 +71,7 @@ class Cake
     $cakes << self
   end
 end
+
 
 cookie_one = Cookie.new("Vegeta-licious", "/images/c1.png", "The Prince of all cookies is second to none in both appearance and delciousness.", "$7.00")
 
