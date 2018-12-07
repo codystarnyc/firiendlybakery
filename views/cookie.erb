@@ -1,13 +1,13 @@
-
-
-<div class="treat-container">
+<div class="sweets">
+<h1>Delicious Cookies!</h1>
+<div class="container row">
 <% $cookies.each do |cookie| %>
-<div>
+<div class ="col-md-4">
   <h2><%= cookie.name%></h2>
-  <img src= "<%= cookie.image %>">
+  <img class="image" src= "<%= cookie.image %>">
   <p><%= cookie.description %></p>
   <p><%= cookie.cost %></p>
 </div>
 <% end %>
 </div>
-
+</div>
