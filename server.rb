@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'curb'
-require 'json'
+require './send.rb'
 
 get '/' do
   erb :home
@@ -22,6 +22,16 @@ end
 get '/contact' do
   erb :contact
 end
+
+def email(recipient)
+  Newsletter.welcome(recipient).deliver_now
+  end
+
+post '/contact' do
+  email = params["email"]
+  Newsletter.welcome(email).deliver_now
+  erb :contact
+ end
 
 
 $cookies = []
@@ -82,6 +92,10 @@ muffin_three = Muffin.new("Choco LOoco", "/images/m4.png", "I live for muffins, 
 
 muffin_four = Muffin.new("MUFF Muffin", "/images/m5.png", "You can't have this one or maybe!", "3.00")
 
+muffin_five = Muffin.new("Cherry on Top", "/images/cc4.png", "Let us pop your cherry!", "$5.00")
+
+muffin_six = Muffin.new("Shine Shine Cup  Cake", "/images/cc5.png", "Try this one, yu will like it!", "$1.00")
+
 cake_one = Cake.new("Vanilla!", "/images/ck1.png", "The wonderful flavor of this cake is the bomb.", "$47.00")
 
 cake_two = Cake.new("Vanilla Chocolate Cake!", "/images/ck2.png", "I love this cake and you should too. Best enjoyed in alone!", "$49.00")
@@ -90,14 +104,14 @@ cake_three = Cake.new("Chocolate Cake!", "/images/ck3.png", "This cake is our fl
 
 cake_four = Cake.new("Strawberry Cake Cake", "/images/ck4.png", "This taste like Strawberry Shortcake!", "$65.00")
 
-cake_one = Cake.new("Chocolate Gun!", "/images/ck5.png", "I love chocolate monkeys, do you?.", "$37.00")
+cake_five= Cake.new("Chocolate Gun!", "/images/ck5.png", "I love chocolate monkeys, do you?.", "$37.00")
 
-cake_two = Cake.new("Strawberry Frosted", "/images/cc1.png", "This is quite disgusting! BUT WE SELL IT ANYWAY!", "$2.00")
+cake_six = Cake.new("Strawberry Frosted", "/images/cc1.png", "This is quite disgusting! BUT WE SELL IT ANYWAY!", "$2.00")
 
-cake_three = Cake.new("Party Sprinkles!", "/images/cc2.png", "This cupcake takes extra long to prepare, but its worth the wait!", "$3.00")
+cake_seven = Cake.new("Party Sprinkles!", "/images/cc2.png", "This cupcake takes extra long to prepare, but its worth the wait!", "$3.00")
 
-cake_four = Cake.new("Cherry on Top", "/images/cc4.png", "Let us pop your cherry!", "$5.00")
+# cake_four = Cake.new("Cherry on Top", "/images/cc4.png", "Let us pop your cherry!", "$5.00")
 
-cake_four = Cake.new("Shine Shine Cup  Cake", "/images/cc5.png", "Try this one, yu will like it!", "$1.00")
+# cake_four = Cake.new("Shine Shine Cup  Cake", "/images/cc5.png", "Try this one, yu will like it!", "$1.00")
 
 

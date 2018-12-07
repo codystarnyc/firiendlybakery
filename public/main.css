@@ -51,6 +51,7 @@ footer img{
   position: absolute;
   right: 10%; 
   top: 13px;}
+
 .carousel{
   z-index:999;
 }
@@ -59,12 +60,13 @@ footer img{
   align-items: center; }
 
 .carouselWrap {
-  height: 40vh; }
+  height: 40vh; 
+ }
 
 .logo1 {
   position: absolute;
   width: 97vw;
-  z-index: 300;
+  z-index: 200;
 }
 .image-size {
   max-width: 200px;
@@ -125,12 +127,21 @@ nav {
     text-align: center;
     border: 3px solid #f0dc39;
     border-radius: 20px;
-    width: 900px;
+    width: 800px;
     height: 220px;
     overflow: auto;
-   
+    z-index:600;
    }
-   
+   .signup {
+    font-family: 'Lora', serif;
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+    background-color: pink;
+    border-radius: 10px;
+    color: white;
+    opacity: .95;
+  }
    .sweets p {
      font-family:sans-serif;
      font-size: 3vh;
@@ -139,5 +150,5 @@ nav {
    }
    .container {
     margin: 0 auto;
-    max-width: 95%;
+    
     }

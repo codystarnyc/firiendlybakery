@@ -19,7 +19,7 @@ class Newsletter < ActionMailer::Base
     end
 end
 
-Newsletter.welcome("adeolatemitayo@gmail.com").deliver_now
+# Newsletter.welcome("adeolatemitayo@gmail.com").deliver_now
 
 #You need a folder whose name matches the name of the class from
 #actionmailer base
