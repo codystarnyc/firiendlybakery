@@ -1,10 +1,14 @@
-<div class="sweets">
-<h1>The Prince's Muffins!</h1>
-<img src="/images/v4.jpg" class="headpic">
-<div class="treat-container">
+
+
+<link rel = "stylesheet" href = "/main.css">
+
+<div class="container">
+  <div class="row>">
+<h1>Events in Your Area!!</h1>
+<%# <img src="/images/b1.jpg" class="headpic"> %>
 <% $muffins.each do |muffin| %>
-<div>
-  <h2><%= muffin.name%></h2>
+<div class="col-md-4">
+ <h2><%= muffin.name%></h2>
   <img src= "<%= muffin.image %>" class="image-size">
   <p><%= muffin.description %></p>
   <p><%= muffin.cost %></p>
@@ -12,3 +16,5 @@
 <% end %>
 </div>
 </div>
+
+   

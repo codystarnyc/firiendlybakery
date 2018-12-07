@@ -1,14 +1,10 @@
-<div class="sweets">
-<h1>Delicious Cakes!</h1>
-<img src="/images/v2.jpg" class="headpic">
-<div class="treat-container">
-<% $cakes.each do |cake| %>
-<div>
-  <h2><%= cake.name%></h2>
-  <img src= "<%= cake.image %>" class="image-size">
-  <p><%= cake.description %></p>
-  <p><%= cake.cost %></p>
-</div>
-<% end %>
-</div>
+<div class="container-fluid">
+  <h1>Hello World!</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+  </div>
 </div>

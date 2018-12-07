@@ -1,118 +1,179 @@
 
-
-@-webkit-keyframes slide {
-  100% {
-    left: 0; } }
-@keyframes slide {
-  100% {
-    left: 0; } }
-
-.logo1 {
-top: 0px;
- position: relative;
-}
-
-section {
-  display: block; }
-
-
-
-  html {
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    html {
     /* overflow-x: hidden; */
-    min-height: 100vh; }
-
-    
-    body {
+    min-height: 100vw; }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    body {    
+      position: fixed;
       color: pink;
-      margin: 0px;
+      top: 20px;
       /* margin-right: 10px; */
-      padding: 40px;
-      background-image:url("backgroundfinal2.png");
-      background-position: center;
+      /* padding: 20px; */
+      background-image:url("finalbackground3.png");
+      /* background-position: center; */
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
       /* background-clip: initial; */
-      line-height: 1em; }
+      line-height: 1em; 
+      min-height: 100%;
+      display: grid;
+      grid-template-rows: 1fr auto;
+}
+      
+    /* Add a gray background color and some padding to the footer */
+    /* footer { */
+      /* background-image: url("footerbg.png");
+      background-size: 100%; */
+      /* grid-row-start: 2;
+      grid-row-end: 3;
+    } */
+footer img{
+  width:100vw;
+  height:20vw;;
+  margin:0;
+}
+
+.header{
+  margin-left: 0;
+}
 
 .carousel-item {
-  /* background-image: url("../img/coloredpanel.png"); */
+  /* ß */
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat; }
 
 .carousel img {
-  /* min-height: 50%; */
-  max-height: 75%;
+  min-height: 50%;
+  max-height: 110%;
   opacity: 0.9;
   position: absolute;
-  right: 10%; }
+  right: 10%; 
+  top: 13px;}
 
 #contentBox {
   display: flex;
   align-items: center; }
 
 .carouselWrap {
-  height: 50vh; }
+  height: 40vh; }
+
+.logo1 {
+  position: absolute;
+  width: 97vw;
+}
+
 
 nav {
   margin-bottom: 1%; }
+
+.nav2{
+    height:  50px;
+  } 
+
 
 #trainerRow {
   margin-bottom: 2%; }
 
 .carousel-inner {
-  overflow: hiddwen; }
+  overflow: visible; }
 
-
-  .footer {
-    max-width: 100%;
-    display: grid;
-    grid-template: 8vh / 1fr 1fr 1fr 1fr 1fr;
-    padding-left: 4vh;
-    font-size: 3vh;
-    font-family: 'Cute Font', cursive;
-    margin-top: 2%
-  }
-  
-
-section {
-  display: block; }
-
-
-  .nav {
+  .nav1 {
     max-width: 100vw;
+    max-height:10vh;
     display: grid;
-    grid-template: 15vh / 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template: 15vh / 1fr 1fr 1fr 1fr 1fr;
     color: #fbb4dc;
     font-size: 4vh;
     font-family: 'Loved by the King', cursive;
-    text-align: right;
-    justify-content: right; 
-    justify-items: right;
-    position: absolute;
+    text-align: center;
+    z-index: 999;
   }
-  
+/* .logo1 {
+  width: 100vw;
  
-  .nav a {
-    margin-top: 4vh;
-    color: #fbb4dc;
+} */
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
   }
-  
-  .nav img {
-    position: relative;
-    width: 1024px;
-    margin: 0;
-  }
-  
-
-
-
-  
-
-
-
-
-
-
-
