@@ -127,8 +127,8 @@ nav {
     text-align: center;
     border: 3px solid #f0dc39;
     border-radius: 20px;
-    width: 800px;
-    height: 220px;
+    width: 80vw;
+    height: 30vw;
     overflow: auto;
     z-index:600;
    }
